@@ -46,11 +46,12 @@ var mailOptions = {
                 
         } 
       };
-
+//Exam model
 const Exam = mongoose.model('Examen',ExamSchema)
 function connectToMongoose(){
         mongoose.connect('mongodb://localhost:27017/examenes');
 }
+
 app.listen(port,()=>{
         console.log(`Listeing on port ${port}`)
 })

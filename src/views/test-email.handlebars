@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Email</title>
+
+
+</head>
+<body>
+
+ 
+    <table style="border-collapse:collapse">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each examenes}}
+                <tr>
+                    <td  style="padding: 5px;px;">{{this.nombre}}</td>
+                    <td  style="padding:5px;">{{this.precio}}.00 Lps </td>
+                </tr>
+            {{/each}}
+            <tr style="border-top:1px black solid;">
+                <td style="padding:5px;"><b>Total</b></td>
+                <td style="padding:5px;"><b>{{total}}.00 Lps</b></td>
+            </tr>
+        </tbody>
+    </table>
+  </body>
+</html>
+

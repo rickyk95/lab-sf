@@ -4,18 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "prestart": "/Users/ricky/desktop/javascript-projects/mongo-server/bin/mongod --dbpath=../../mongodb-data &",
+    "poststart": "kill %%",
+    "dev":"node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.10",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.4",
-    "googleapis": "^89.0.0",
     "mongoose": "^6.0.8",
     "nodemailer": "^6.7.0",
-    "nodemailer-express-handlebars": "^4.0.0",
-    "request": "^2.88.2"
+    "nodemailer-express-handlebars": "^4.0.0"
   }
 }

@@ -210,7 +210,7 @@ a:hover {
 
 #cotizador {
   font-family: 'Montserrat', sans-serif;
-  height: 450px;
+  height: 650px;
   overflow-y: scroll;
   background-color: whitesmoke;
   padding: 50px 0px;
@@ -222,7 +222,6 @@ a:hover {
   margin-bottom: 50px;
   position: sticky;
 }
-
 @media screen and (max-width: 991px) {
   body,
   html {

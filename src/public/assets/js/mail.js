@@ -1,7 +1,5 @@
 const nodemailer = require('nodemailer')
-
 const hbs = require('nodemailer-express-handlebars')
-
 var transporter = nodemailer.createTransport({    
     service: 'Office365',
     host: "smtpout.secureserver.net",  
@@ -12,7 +10,6 @@ var transporter = nodemailer.createTransport({
             pass: "Octubre131064RmA"
     }
 });
-
 transporter.use('compile',hbs({
     viewEngine:{
             extname:'.handlebars',
@@ -31,7 +28,6 @@ var mailOptions = {
                 
         } 
         };
-
 module.exports={
     transporter,mailOptions
 }

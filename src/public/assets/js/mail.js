@@ -6,8 +6,8 @@ var transporter = nodemailer.createTransport({
     secureConnection: true,
     port: 465,
     auth: {
-            user: "cotizador@laboratoriossanfelipehn.com",
-            pass: "Octubre131064RmA"
+            user: "cotiza-examenes@laboratoriossanfelipehn.com",
+            pass: "RNo#xiisu3"
     }
 });
 transporter.use('compile',hbs({
@@ -20,7 +20,7 @@ transporter.use('compile',hbs({
     extName:'.handlebars'
 }))
 var mailOptions = {
-        from: "cotizador@laboratoriossanfelipehn.com",
+        from: "cotiza-examenes@laboratoriossanfelipehn.com",
         to: "",
         subject: "",
         template:'test-email',  

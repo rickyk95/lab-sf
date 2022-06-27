@@ -72,6 +72,13 @@ h6 {
   line-height: 1.2em;
 }
 
+.st-shedule{
+  overflow-y:scroll;
+  height:50vh;
+}
+.st-shedule h6{
+  font-weight:300;
+}
 h1 {
   font-size: 40px;
 }
@@ -152,6 +159,13 @@ a:hover {
   position: relative;
   height: 920px !important;
   background-color: black;
+}
+
+
+
+/*This line gets rid of the 'Contact Now' button'*/
+.st-pricing-btn{
+  display:none;
 }
 
 @media screen and (max-width: 500px) {

@@ -28,6 +28,8 @@ router.get('/',  async (req,res)=>{
     }
 })
 
+
+
 router.post('/cotizador', async (req,res)=>{
  try{
     let total = 0;
@@ -56,7 +58,7 @@ router.post('/cotizador', async (req,res)=>{
                             }
                     })
 
-                    res.send('Email Sent')
+                    res.render('form-submission',{layout:false,name:req.body.nombre})
              }
     })
 

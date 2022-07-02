@@ -3,7 +3,7 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 require('dotenv').config();
 const app = express();
-const port =  3000;
+const port =  process.ENV.PORT || 3000;
 const connectToMongoose = require('./src/public/assets/js/promiseWrapper');
 connectToMongoose
   .then((value) => {

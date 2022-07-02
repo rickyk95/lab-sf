@@ -6,8 +6,8 @@ var transporter = nodemailer.createTransport({
     secureConnection: true,
     port: 465,
     auth: {
-            user: "cotiza-examenes@laboratoriossanfelipehn.com",
-            pass: process.env.emailPassword
+            user: "cotizador@laboratoriossanfelipehn.com",
+            pass: '&3P+-GxYoA'
     }
 });
 transporter.use('compile',hbs({

@@ -8,3 +8,4 @@ const connectToMongoose = new Promise((resolve, reject) => {
 
 module.exports = connectToMongoose
 
+//db promise wrapper

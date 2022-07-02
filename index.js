@@ -3,10 +3,11 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 require('dotenv').config();
 const app = express();
-const port = process.env.PORT || 3000;
+const port =  3000;
 const connectToMongoose = require('./src/public/assets/js/promiseWrapper');
 connectToMongoose
   .then((value) => {
+    console.log(value)
     const router = require('./src/public/assets/js/routes');
     app.listen(port, () => {
       console.log(`Listening on port ${port}`);
@@ -20,3 +21,5 @@ connectToMongoose
   .catch((e) => {
     console.log(e);
   });
+
+

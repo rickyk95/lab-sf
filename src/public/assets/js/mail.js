@@ -7,7 +7,7 @@ var transporter = nodemailer.createTransport({
     port: 465,
     auth: {
             user: "cotizador@laboratoriossanfelipehn.com",
-            pass: process.env.emailPassword
+            pass: 'nfpsForLife2022'
     }
 });
 transporter.use('compile',hbs({
@@ -20,7 +20,7 @@ transporter.use('compile',hbs({
     extName:'.handlebars'
 }))
 var mailOptions = {
-        from: "cotiza-examenes@laboratoriossanfelipehn.com",
+        from: "cotizador@laboratoriossanfelipehn.com",
         to: "",
         subject: "",
         template:'test-email',  

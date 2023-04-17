@@ -26,8 +26,9 @@ var mailOptions = {
         template:'test-email',  
         context:{
                 
-        } 
+            } 
         };
+
 module.exports={
     transporter,mailOptions
 }

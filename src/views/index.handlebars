@@ -113,7 +113,7 @@
   </header>
   <div class="st-content">
     <div id="main-section">
-        <h1 class="text-white display-4 text-center">30 Años Sirviendote</h1>
+        <h1 class="text-white display-4 text-center">Examenes medicos confiables, entregados con rapidez</h1>
         <a class="btn" id="main-cta" target="_blank" href="https://wa.me/+50494201754?text=Hola! Me gustaría reservar una cita.">Reserva tu cita</a>
     </div>
     <section>
@@ -628,20 +628,22 @@ Misión: Somos una empresa de servicios de análisis clínicos, enfocados en bri
       <div class="st-height-b120 st-height-lg-b80"></div>
     </section>
     <hr>
-
-    
     <section id="cotizador">
       <h1 class="text-center">Cotiza el examen que buscas</h1>
+      <div id="container" style="text-align:center;">
+          <input type="text" id="test-search">
+      </div>
       <form action="/cotizador" method="POST">
-      <div class="row">  
+      <div id="cotizador-container">  
             {{#each nombres}}
-              <div class="col-md-1"></div>
-              <div class="col-md-5">
+              <div class="test-div">
                   <input value ="{{this}}" name ='examen' type="checkbox">
-                  <label for="{{this}}">{{this}}</label>
+                  <h4 for="{{this}}">{{this}}</h4>
               </div>
-            {{/each}}
-      <div class="col-md-12 text-center">
+            {{/each}}  
+      </div> 
+
+            <div class="col-md-12 text-center">
         <h2 class="mt-5">Ingresa tu informacion y recibe los precios</h2>
             <div class="form-group">
               <label for="nombre">Nombre</label>
@@ -659,8 +661,7 @@ Misión: Somos una empresa de servicios de análisis clínicos, enfocados en bri
               <div id="correo-message"></div>
             </div>
               <button type="submit" href="" class=" d-block w-50 mx-auto btn btn-primary">Enviar Cotización</a>
-      </div>     
-      </div> 
+      </div>   
     </form>
     </section>
     
@@ -1353,7 +1354,7 @@ Misión: Somos una empresa de servicios de análisis clínicos, enfocados en bri
       <div class="container">
         <div class="st-copyright-in">
           <div class="st-left-copyright">
-            <div class="st-copyright-text">Copyright 2021. Design by Laralink</div>
+            <div class="st-copyright-text"></div>
           </div>
           <div class="st-right-copyright">
             <div id="st-backtotop"><i class="fas fa-angle-up"></i></div>
@@ -1386,6 +1387,7 @@ Misión: Somos una empresa de servicios de análisis clínicos, enfocados en bri
 
   <!-- Scripts -->
   <script src="/js/form-validation.js"></script>
+    <script src="/js/testSearch.js"></script>
   <script src="/js/vendor/modernizr-3.5.0.min.js"></script>
   <script src="/js/vendor/jquery-1.12.4.min.js"></script>
   <script src="/js/isotope.pkg.min.js"></script>

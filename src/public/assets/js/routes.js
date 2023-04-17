@@ -10,7 +10,7 @@ const ExamSchema = new Schema({
                     type:Number,
                     default:0
             }
-    })
+    },{collection:"examenes"})
 
 const Exam = mongoose.model('Examen',ExamSchema)
 router.use(express.urlencoded({extended:false}))
@@ -21,13 +21,13 @@ router.get('/',  async (req,res)=>{
         let nombres = exams.map((examen)=>{
                 return examen.nombre
     })
+        console.log(nombres);
         res.render('index',{layout:false,nombres})
     }catch(e){
             console.log(e,'Error in root URL')
             res.send('<h1>Ha ocurrido un Error </h1>')
     }
 })
-
 
 
 router.post('/cotizador', async (req,res)=>{

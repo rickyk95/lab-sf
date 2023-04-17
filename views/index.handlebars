@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/50233981bd.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Laboratorios San Felipe</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCZZ9VME3V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QCZZ9VME3V');
+    </script>
+</head>
+<body>
+    <!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/24295202.js"></script>
+<!-- End of HubSpot Embed Code -->
+    <nav>
+        <div id="toggler">
+            <i class="fa-solid fa-toggle-on"></i>
+        </div>                     
+        <div class="logo-container">
+            <a href="/">
+                <img src="logo-lab.png" alt="">
+            </a>
+        </div>
+        <ul id="nav-list">
+            <li><a href="#inicio" data-value="main">Inicio</a></li>
+            <li><a href="#quienes-somos" data-value="quienes-somos">Quienes Somos</a></li>
+            <li><a href="#horario" data-value="horario">Horarios</a></li>
+            <li><a href="#cotizador" data-value="cotizador">Cotizar</a></li>
+            <li><a href="#contact-form" data-value="contact-form">Contacto</a></li>
+            <li><a href="#articulos">Artículos</a></li>
+            {{!-- <li><a href="#">Ofertas</a></li> --}}
+        </ul>
+        <div id="quotation">
+            <i class="fa-regular fa-envelope"></i>
+            <div id="counter">0</div>
+        </div>
+    </nav>
+   <section id="main">
+        <div id="main-header">
+            <h1>Servicios de Salud de Punta</h1>
+        </div> 
+        <a id="main-cta" href="https://wa.me/50494201754?text=Hola!%20me%20gustaría%20hacer%20una%20cotización." target="_blank">
+            Cotiza por WhatsApp
+        </a>
+    </section>
+    <section id="props">
+        <div class="prop">
+            <div class="icon-container">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+            <h4>Resultados con minimo tiempo de espera.</h4>
+        </div>
+        <div class="prop">
+            <div class="icon-container">
+                <i class="fa-solid fa-user-doctor"></i>
+            </div>
+            <h4>Exámenes verificados por juicio experto.</h4>
+        </div>
+        <div class="prop">
+            <div class="icon-container">
+                <i class="fa-solid fa-certificate"></i>
+            </div>
+            <h4>Laboratorio Certificado ISO 9001 </h4>
+        </div>
+    </section>
+    <section id="quienes-somos">
+        <div class="img-container">
+            <img src="quienes-somos.jpg" alt="">
+        </div>
+        <div class="text-container">
+            <div class="header-container">
+                <hr style="width:40%;">
+                <h2>Quienes Somos</h2>
+            </div>
+            <div class="main-text">
+                <p>En el año de 1989 inicia sus actividades LABORATORIOS SAN FELIPE-DEL VALLE ,con el propósito de brindar a la sociedad un servicio de análisis clínicos confiable y con ética profesional. Inicia sus labores con las área de Hematología, Inmunología, Química Sanguínea, Toxicología, Pruebas especiales, Microbiología, Parasitología, Uroanálisis. </p>
+                <p>Para tal propósito se adquiere tecnología de punta y recursos humanos altamente calificados. Todo este conjunto de factores ha llevado a LABORATORIOS SAN FELIPE-DEL VALLE a obtener un crecimiento sostenido manteniendo la mas alta calidad en sus resultados. Misión: Somos una empresa de servicios de análisis clínicos, enfocados en brindarle el mejor servicio de alta calidad científica, con responsabilidad, ética, calidad, aplicando siempre la tecnología de punta proporcionando así información clínica fundamental para beneficio de sus pacientes.</p>
+            </div>
+        </div>
+    </section>
+    <section id="horario">
+            <div class="horarios">
+                <h2>Horarios</h2>
+                <div class="bar">
+                        <div class="sucursal"> San Carlos</div>
+                        <div class="sucursal"> San Felipe</div>
+                        <div class="sucursal"> Valle de Angeles</div>
+                </div>
+                <table>
+                    <thead>
+                            <th>Direccion</th>
+                            <th>Telefono</th>
+                            <th>Horario</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="direccion"></td>
+                            <td id="telefono"></td>
+                            <td id="horas"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </section>
+        <div id="test-search">
+        <div id="search-header">
+            <h2 style="font-weight:700;">Cotizador</h2>
+        </div>
+        <div id="search-box">
+            <input type="text" placeholder="Busca el examen">
+        </div>
+    </div>
+    <div id="cotizador">
+  {{#each tests}}
+           <div class="test">
+            <div class="test-name">
+                <h3 data-test-name="{{nombre}}">{{nombre}}</h3>
+            </div>
+            <div class="test-specs hidden">
+                <h1 class="close-specs">X</h1>
+                    <div class="test-specs-list">
+                        <h1>General de Heces</h1>
+                        <ul>
+                        <li>No haber desayunado</li>
+                        <li>11 horas de ayuno</li>
+                        <li>Haber dormido bien</li>
+                        <li>No haber hecho ejercicio</li>
+                        <li>Pesarse antes del examen</li>
+                        </ul>
+                    </div>
+            </div>
+            {{!-- <div class="test-category">Quimica</div> --}}
+            <div class="btns-container">
+                <button class="add-to-cart-btn" href="#">Agregar</button>
+            </div>
+        </div>
+  {{/each}}
+        </div>
+    </div>
+    <section id="contact-form">
+        <div class="img-container">
+            <img src="horario.jpg">
+        </div>
+        <form  action="#" method="POST">
+            <h2>Envianos un mensaje</h2>
+            <label for="">Nombre</label>
+            <input type="text" name="nombre">
+             <label for="">Apellido</label>
+            <input type="text" name="lastName">
+             <label for="">Correo</label>
+            <input type="email" name="email">
+            <label>Pregunta</label>
+            <textarea></textarea>
+            <input type="submit" value="Enviar"> 
+        </form>
+    </section>
+
+    <div id="checkout" class="slide-right">
+        <i class="fa-solid fa-square-caret-left"></i>
+        <div id="checkout-list">
+            <h2>Lista de Examenes a Cotizar</h2>
+            <div id="checkout-list-inner">
+            </div>
+            <div id="next-btn-container">
+                <button type="button" id="next-btn">Siguiente Paso</button>
+            </div>
+        </div>
+        <div id="checkout-form">
+            <form action="" method="POST">
+                <label>Nombre</label>
+                <input name="nombre" type="text" placeholder="e.j. Juan">
+                <label>Apellido</label>
+                <input name="apellido" type="text" placeholder="e.j. Perez ">
+                <label>Correo</label>
+                <input  name="correo" type="email" placeholder="e.j. ejemplo@outlook.com">
+                <div id="checkout-btns-container">
+                    <button type="button" id="prev-btn">Regresar</button>
+                    <input type="submit" value="Solicitar Cotización" id="submit-form-btn">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="mobile-quotation">
+        <button id="abrir-cotizador" style="padding:0.7rem 2rem;background-color:white;color:black;">Abrir Cotizador</button>
+        <div id="mobile-quotation-counter">
+            <i class="fa-regular fa-envelope"></i>
+            <div id="mobile-counter">
+
+            </div>
+        </div>
+    </div> 
+
+    <div id="articulos">
+        <div class="article">
+            <div class="article-image">
+                <img src="images/web/azucar.jpg" alt="">
+            </div>
+            <div class="article-title">
+                <h3><a href="/articulos/5 señales de que tu azúcar está alta">5 señales de que tu azúcar está alta</a></h3>
+            </div>
+        </div>   
+     <div class="article">
+            <div class="article-image">
+                <img src="images/web/tiroide.jpg" alt="">
+            </div>
+            <div class="article-title">
+                <h3><a href="/articulos/5 señales que indican que podrías tener problemas de tiroides">5 señales que indican que podrías tener problemas de tiroides</a></h3>
+            </div>
+    </div>
+     <div class="article">
+            <div class="article-image">
+                <img src="images/web/corazon.jpg" alt="">
+            </div>
+            <div class="article-title">
+                <h3><a href="/articulos/7 Razones por las cuales debes chequearte el corazón">7 Razones por las cuales debes chequearte el corazón</a></h3>
+            </div>
+    </div>   
+     <div class="article">
+            <div class="article-image">
+                <img src="images/web/prostata.jpg" alt="">
+            </div>
+            <div class="article-title">
+                <h3> <a href="/articulos/Problemas de Próstata: Síntomas y Exámenes de Diagnóstico">Problemas de Próstata: Síntomas y Exámenes de Diagnóstico</a></h3>
+            </div>
+    </div>        
+    </div>
+    {{> footer}}
+
+   <script src="hours.js"></script>
+   <script src="search.js" ></script>
+   <script src="nav.js"></script>
+   <script src="hero.js"></script>
+   <script src="addToCart.js"></script>
+   <script src="quoteAnimation.js"></script>
+    <script src="submitForm.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+   {{!-- <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    region: "na1",
+    portalId: "24295202",
+    formId: "689c9952-71e0-4920-86b1-9e95baf576c6"
+  });
+</script> --}}
+   <script>
+        let textBox = document.querySelector('#quienes-somos .main-text');
+        gsap.from('#quienes-somos .main-text',{
+            scrollTrigger:"#quienes-somos",
+            x:1000,
+            duration:2
+        })
+        gsap.from('#quienes-somos .header-container h2',{
+            scrollTrigger:"#quienes-somos",
+            x:1000,
+            duration:2
+        })
+        gsap.from('#quienes-somos .img-container img',{
+            scrollTrigger:"#quienes-somos",
+            x:-1000,
+            duration:2
+        })
+   </script>
+</body>
+</html>

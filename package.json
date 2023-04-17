@@ -1,22 +1,21 @@
 {
-  "name": "laboratorios-sf",
+  "name": "cotizador-separado",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "search.js",
   "scripts": {
-    "start": "node index.js",
-    "prestart": "/Users/ricky/desktop/javascript-projects/mongo-server/bin/mongod --dbpath=../../mongodb-data &",
-    "poststart": "kill %%",
-    "dev":"node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^5.3.4",
-    "mongoose": "^6.0.8",
-    "nodemailer": "^6.7.0",
-    "nodemailer-express-handlebars": "^4.0.0"
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.7",
+    "hubspot": "^2.3.14",
+    "mongoose": "^6.9.0",
+    "nodemailer": "^6.9.1",
+    "nodemailer-express-handlebars": "^6.1.0"
   }
 }

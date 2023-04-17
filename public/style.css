@@ -761,6 +761,7 @@ h2{
         bottom:50%;
         white-space:wrap;
         padding:11px 0;
+        text-align:center;
     }
 
     #main-cta{
